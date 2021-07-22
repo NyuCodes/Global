@@ -19,5 +19,5 @@
 <div></div>
 <div></div>
 <div class ="Active Plugins">
-<details><summary>Skill Book Interactive Plugin</summary>https://www.nuget.org/packages/Global.Addons.SkillMenu/</details>
+<details><summary>Skill Book Interactive Plugin by <a href="https://github.com/michaelukz">Nyu</a></summary>https://www.nuget.org/packages/Global.Addons.SkillMenu/</details>
 </div>
