@@ -20,5 +20,5 @@
 <div></div>
 <div class ="Active Plugins">
 <details><summary>Skill Book Interactive Plugin by <a href="https://github.com/michaelukz">Nyu</a></summary>https://www.nuget.org/packages/Global.Addons.SkillMenu</details>
-  <details><summary>Quick Plug-n-Play Discord.Net by <a href="https://github.com/michaelukz">Nyu</a></summary>https://discord.com/channels/@me/442431199483527168/868365064808321074</details>
+  <details><summary>Quick Plug-n-Play Discord.Net by <a href="https://github.com/michaelukz">Nyu</a></summary>https://www.nuget.org/packages/Global.Discord</details>
 </div>
