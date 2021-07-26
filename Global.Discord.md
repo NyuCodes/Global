@@ -11,6 +11,8 @@
 &nbsp;
 <h4>
   <a href="https://github.com/michaelukz">Developed by Nyu</a> This <a href="https://www.nuget.org/packages/Global.Discord">package</a> is designed as educational in purpose and is not meant to serve as a replacement for a proper Command handler, This package is limited and not meant for long term use.
+	
+Click on package or search Global.Discord on NPM to download.
   </h4>
 </div>
 <div></div>
