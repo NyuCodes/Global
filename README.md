@@ -19,7 +19,7 @@
 <div></div>
 <div></div>
 <div class ="Active Plugins">
-<details><summary>Skill Book Interactive Plugin by <a href="https://github.com/michaelukz">Nyu<img alt="Nuget" src="https://img.shields.io/nuget/v/Global.Addons.SkillMenu?color=cyan&logoColor=red&style=plastic"></a></summary>https://www.nuget.org/packages/Global.Addons.SkillMenu</details>
-  <details><summary>Quick Plug-n-Play Discord.Net by <a href="https://github.com/michaelukz">Nyu <img alt="Nuget" src="https://img.shields.io/nuget/v/Global.Discord?color=cyan&logoColor=red&style=plastic"></a></summary>https://github.com/NyuCodes/Global/blob/main/Global.Discord.md</details>
-  <details><summary> Quick launch MongoDB by <a href="https://github.com/michaelukz">Nyu<img alt="Nuget" src="https://img.shields.io/nuget/v/Global.Addons.Storage.Mongo?color=cyan&logoColor=red&style=plastic"></a></summary>https://www.nuget.org/packages/Global.Addons.Storage.Mongo</details>
+<details><summary>Skill Book Interactive Plugin by <a href="https://github.com/michaelukz">Nyu &nbsp;&nbsp;&nbsp;<img alt="Nuget" src="https://img.shields.io/nuget/v/Global.Addons.SkillMenu?color=cyan&logoColor=red&style=plastic"></a></summary>https://www.nuget.org/packages/Global.Addons.SkillMenu</details>
+  <details><summary>Quick Plug-n-Play Discord.Net by <a href="https://github.com/michaelukz">Nyu &nbsp;&nbsp;&nbsp;<img alt="Nuget" src="https://img.shields.io/nuget/v/Global.Discord?color=cyan&logoColor=red&style=plastic"></a></summary>https://github.com/NyuCodes/Global/blob/main/Global.Discord.md</details>
+  <details><summary> Quick launch MongoDB by <a href="https://github.com/michaelukz">Nyu &nbsp;&nbsp;&nbsp;<img alt="Nuget" src="https://img.shields.io/nuget/v/Global.Addons.Storage.Mongo?color=cyan&logoColor=red&style=plastic"></a></summary>https://www.nuget.org/packages/Global.Addons.Storage.Mongo</details>
 </div>
