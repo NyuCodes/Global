@@ -1,6 +1,7 @@
 <h1 align="center">
   <img src="https://media.discordapp.net/attachments/713367706736525332/867802837182054410/unknown.png" width="224px"/><br/>
   Global.Discord
+	<img alt="Nuget" src="https://img.shields.io/nuget/v/Global.Discord?color=cyan&logoColor=red&style=plastic">
 </h1>
 
 
