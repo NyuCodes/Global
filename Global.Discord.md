@@ -46,5 +46,53 @@ public class Program
 	<div class="Usage-Adding-an-Event">
 	To add an event, simply add:
 		
-		_Client.EventNameHere += MethodNameHere
+	_Client.EventNameHere += MethodNameHere
+<div>
+	<h1> Creating a command handler. </h1>
+	Within your program class add
+	
+	_Client.MessageReceived += CommandHandler;
+	
+Then we add our Method, you can also press tab when typing within visual studio to auto complete the method for you.
+	
+	private async Task CLClient_Handle_Messages(SocketMessage arg)
+	{
+		int pos = 0; // This is the position of the command trigger IE !ping, the trigger differentiating between command and message is the '!'
+		var _msg = arg as SocketUserMessage; // Here we cast arg to a SocketUserMessage, this has many benefits, but mainly it has certain methods, IE 'Author.IsBot'
+		if (!_msg.Author.IsBot) // We now check if the user is not a bot, that '!' inverts the if to be 'if-is-not [bot]'
+		{
+			await Task.Delay(100);
+			Console.WriteLine("[" + _msg.Author.Username + "]" + ": " + _msg.Content); // Now we write the message into the console, you can jazz this up in many ways including changing the color, but I will leave that up to you
+			if (_msg.HasStringPrefix(DiscordEngine.Configuration.Load().Prefix.ToLower(), 	ref pos, StringComparison.OrdinalIgnoreCase) // This is checking if our assigned prefix has been detected at the start, and it tells it to ignore case
+			|| _msg.HasMentionPrefix(_Client.CurrentUser, ref pos)) // This checks if the bot has been mentioned instead of a prefix, you can disable this by deleting this
+			{
+				var _Context = new SocketCommandContext(_Client, _msg); // Now we create a command context with our client, and our message
+				var result = await _Commands.ExecuteAsync(_Context, pos, _Services); // Now we attempt to execute the command
+				if (!result.IsSuccess) // checking if the command failed (notice the '!')
+				{
+					await _Context.Channel.SendMessageAsync($"[Error]: {result.ErrorReason}"); // tells the bot to respond with the error message
+				}
+			}
+		}
+	}
+</div>
+		<div>
+			<h2>Time to make our first command</h2>
+			<a>I prefer to create mine in a seperate class, the benefit to this is simple navigation, rather than sorting through a massive list to edit 1 command, you just open the correct file.</a>
+			
+	using Discord.Commands;
+	using System.Threading.Tasks;
+	namespace YourBotsNameHere
+	{
+		public class Ping : ModuleBase<SocketCommandContext>
+		{
+			[Command("ping")] // Here you set the name of the command, this will become '!ping' in chat
+			public async Task DoPing() // Here we name our method and request any potential information.
+			{
+				await ReplyAsync("Pong!"); // Here we respond with pong!
+			}
+		}
+	}
+And that's it, time to start making your own bots!
+</div>
 </div>
