@@ -55,7 +55,7 @@ public class Program
 	
 Then we add our Method, you can also press tab when typing within visual studio to auto complete the method for you.
 	
-	private async Task CLClient_Handle_Messages(SocketMessage arg)
+	private async Task CommandHandler(SocketMessage arg)
 	{
 		int pos = 0; // This is the position of the command trigger IE !ping, the trigger differentiating between command and message is the '!'
 		var _msg = arg as SocketUserMessage; // Here we cast arg to a SocketUserMessage, this has many benefits, but mainly it has certain methods, IE 'Author.IsBot'
