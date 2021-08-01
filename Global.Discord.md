@@ -22,26 +22,28 @@ Click on package or search Global.Discord on NPM to download.
 <div></div>
 <div class ="Usage">
 <h1>Usage:</h1>
-public class Program
-    {
-        public static void Main(string[] args)
-            => new Program().ProgramAsync().GetAwaiter().GetResult();
-
-        public DiscordSocketClient _Client;
-        public CommandService _Commands;
-        public IServiceProvider _Services;
-        public async Task ProgramAsync()
-        {
-            var PublicClient = new DiscordSocketClient();
-            var Engine = new DiscordEngine();
-            var Client = await Engine.StartupAsync("Configuration.json", PublicClient);
-            _Client = Client;
-            _Commands = new CommandService();
-            _Services = Engine.ConfigureServices(_Client,_Commands);
-            await _Commands.AddModulesAsync(Assembly.GetEntryAssembly(), _Services);
-            var count = _Commands.Commands as List<CommandInfo>;
-            await Task.Delay(-1);
-        }
+	
+	public class Program
+	{
+		public static void Main(string[] args)
+		=> new Program().ProgramAsync().GetAwaiter().GetResult();
+	
+		public DiscordSocketClient _Client;
+		public CommandService _Commands;
+		public IServiceProvider _Services;
+		public async Task ProgramAsync()
+		{
+			var PublicClient = new DiscordSocketClient();
+			var Engine = new DiscordEngine();
+			var Client = await Engine.StartupAsync("Configuration.json", PublicClient);
+			_Client = Client;
+			_Commands = new CommandService();
+			_Services = Engine.ConfigureServices(_Client,_Commands);
+			await _Commands.AddModulesAsync(Assembly.GetEntryAssembly(), _Services);
+			var count = _Commands.Commands as List<CommandInfo>;
+			await Task.Delay(-1);
+		}
+	}
 </div>
 	<div class="Usage-Adding-an-Event">
 	To add an event, simply add:
