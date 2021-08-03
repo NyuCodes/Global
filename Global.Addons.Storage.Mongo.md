@@ -58,7 +58,6 @@ This will return the a list of Users within the connected collection and return 
 <summary>AddOne</summary>
 
 <h3>Method is synchronous, Parameters include: TDoc.</h3>
-<summary>Please note that the string provided must be parsable.</summary>
 
 	var User1 = new User() { _id= "6106e09b720680d5d7de8b6a", FirstName = "Object", SecondName="One",Position = Role.Supervisor}
 	Mongo.AddOne(User);
