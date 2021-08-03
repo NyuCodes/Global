@@ -67,7 +67,7 @@ This does not return anything.
 </details>
 <details>
 <summary>AddMany</summary>
-<h3>Method is synchronous, Parameters include: IEnumerable<TDoc>.</h3>
+<h3>Method is synchronous, Parameters include: IEnumerable< TDoc >.</h3>
 
 	var User1 = new User() { _id= "6106e09b720680d5d7de8b6a", FirstName = "Object", SecondName="One",Position = Role.Supervisor}
 	var User2 = new User() { _id= "6106e09b720680d5d7de8b6b", FirstName = "Object", SecondName="One",Position = Role.Supervisor}
@@ -87,7 +87,7 @@ This does not return anything.
 </details>
 <details>
 <summary>DeleteMany</summary>
-<h3>Method is synchronous, Parameters include: TDoc.</h3>
+<h3>Method is synchronous, Parameters include: IEnumerable< TDoc >.</h3>
 	
 	var User1 = new User() { _id= "6106e09b720680d5d7de8b6a", FirstName = "Object", SecondName="One",Position = Role.Supervisor}
 	var User2 = new User() { _id= "6106e09b720680d5d7de8b6b", FirstName = "Object", SecondName="One",Position = Role.Supervisor}
@@ -96,10 +96,30 @@ This does not return anything.
 	
 This does not return anything.
 </details>
+<details>
+<summary>ModifyOneAsync</summary>
+<h3>Method is asynchronous, Parameters include: TDoc, Key, Value.</h3>
+	
+	var User1 = new User() { _id= "6106e09b720680d5d7de8b6a", FirstName = "Object", SecondName="One",Position = Role.Supervisor}
+	var ReturnedUser = await Mongo.ModifyOneAsync(User1, "Position", Role.CEO); 
+	
+This will return the modified element.
+</details>
+<details>
+<summary>ModifyManyAsync</summary>
+<h3>Method is asynchronous, Parameters include: IEnumerable< TDoc >, Key, Value.</h3>
+	
+	var User1 = new User() { _id= "6106e09b720680d5d7de8b6a", FirstName = "Object", SecondName="One",Position = Role.Supervisor}
+	var User2 = new User() { _id= "6106e09b720680d5d7de8b6b", FirstName = "Object", SecondName="Two",Position = Role.Ceo}
+	var Users = new List<User>() {User1, User2}
+	var ReturnedUsers = await Mongo.ModifyManyAsync(Users, "FirstName", "King Jeoffrey"); 
+	
+This will return the modified element.
+</details>
 </details>
 </div>
 <div class ="Usage">
-<h1>Usage:</h1>
+<h1>Example Method:</h1>
 
 	public async Task GetAllEmployees()
 	{
